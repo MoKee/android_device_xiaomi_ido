@@ -1,4 +1,8 @@
 [
+  {
+    "repository": "android_vendor_xiaomi_ido",
+    "target_path": "vendor/xiaomi/ido"
+  },
  {
    "repository": "android_device_qcom_common",
    "target_path": "device/qcom/common"
