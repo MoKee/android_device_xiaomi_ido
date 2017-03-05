@@ -88,7 +88,9 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # MKHW
 BOARD_USES_MOKEE_HARDWARE := true
-BOARD_HARDWARE_CLASS += hardware/mokee/mkhw
+BOARD_HARDWARE_CLASS += \
+    hardware/mokee/mkhw \
+    device/xiaomi/ido/mkhw
 
 # Display
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
