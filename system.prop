@@ -36,9 +36,6 @@ persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 
-# Perf
-ro.sys.fw.dex2oat_thread_count=3
-
 # Radio
 DEVICE_PROVISIONED=1
 rild.libargs=-d /dev/smd0
