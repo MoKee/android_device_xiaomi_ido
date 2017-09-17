@@ -1,6 +1,5 @@
 # Art
 dalvik.vm.dex2oat-flags=--no-watch-dog
-ro.sys.fw.dex2oat_thread_count=4
 
 # Audio
 af.fast_track_multiplier=1
@@ -35,20 +34,10 @@ qcom.bluetooth.soc=smd
 ro.bluetooth.dun=true
 ro.bluetooth.hfp.ver=1.7
 ro.bluetooth.sap=true
-ro.qualcomm.bluetooth.ftp=true
-ro.qualcomm.bluetooth.hfp=true
-ro.qualcomm.bluetooth.hsp=true
-ro.qualcomm.bluetooth.map=true
-ro.qualcomm.bluetooth.nap=true
-ro.qualcomm.bluetooth.opp=true
-ro.qualcomm.bluetooth.pbap=true
 ro.qualcomm.bt.hci_transport=smd
 
 # Camera
 persist.camera.cpp.duplication=false
-
-# Charger
-persist.sys.chgdisabled=0
 
 # CNE
 persist.cne.feature=1
@@ -80,8 +69,6 @@ mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 mm.enable.qcom_parser=3407871
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 
 # Netmgrd
 ro.use_data_netmgrd=true
