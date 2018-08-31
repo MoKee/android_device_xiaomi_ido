@@ -32,7 +32,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
+    /system/bin/cameraserver=23 \
+    /system/bin/mediaserver=23
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
