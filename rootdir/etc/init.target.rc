@@ -30,12 +30,7 @@ on boot
     chown system system /sys/class/leds/infrared/transmit
     chown system system /sys/class/leds/infrared/brightness
 
-    #  KeyDisabler
-    chown root system /proc/touchpanel/capacitive_keys_enable
-    chmod 0664 /proc/touchpanel/capacitive_keys_enable
-    restorecon /proc/touchpanel/capacitive_keys_enable
-
-    #  Fingerprint
+    # Fingerprint
     chown input system /sys/devices/soc.0/fpc1020.70/enable_wakeup
     chmod 0666 /sys/devices/soc.0/fpc1020.70/enable_wakeup
     chown system system /sys/devices/soc.0/fpc1020.70/clk_enable

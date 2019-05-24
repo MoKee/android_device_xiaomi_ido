@@ -1,0 +1,8 @@
+on init
+    chown system system /proc/touchpanel/capacitive_keys_enable
+    chmod 0660 /proc/touchpanel/capacitive_keys_enable
+
+service vendor.touch-hal-1-0-ido /vendor/bin/hw/vendor.mokee.touch@1.0-service.ido
+    class hal
+    user system
+    group system
