@@ -29,7 +29,7 @@ import org.mokee.internal.util.FileUtils;
 
 public class KeyDisabler {
 
-    private static String CONTROL_PATH = "/sys/bus/i2c/drivers/atmel_mxt_ts/5-004a/keys_off";
+    private static String CONTROL_PATH = "/proc/touchpanel/capacitive_keys_enable";
 
     public static boolean isSupported() {
         return FileUtils.isFileReadable(CONTROL_PATH) &&
