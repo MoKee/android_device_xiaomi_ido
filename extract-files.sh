@@ -60,4 +60,11 @@ setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
+BLOB_ROOT="$MK_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+sed -i "s|/system/etc/aanc_tuning_mixer.txt|/vendor/etc/aanc_tuning_mixer.txt|g" "$BLOB_ROOT"/vendor/lib/libacdbloader.so
+sed -i "s|/system/etc/aanc_tuning_mixer.txt|/vendor/etc/aanc_tuning_mixer.txt|g" "$BLOB_ROOT"/vendor/lib64/libacdbloader.so
+sed -i "s|system/etc|vendor/etc|g" "$BLOB_ROOT"/vendor/lib/hw/sound_trigger.primary.msm8916.so
+sed -i "s|system/lib|vendor/lib|g" "$BLOB_ROOT"/vendor/lib/hw/sound_trigger.primary.msm8916.so
+
 "$MY_DIR"/setup-makefiles.sh
