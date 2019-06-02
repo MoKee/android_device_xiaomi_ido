@@ -57,6 +57,13 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     camera.device@1.0-impl
 
+# Consumerir
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:system/vendor/etc/permissions/android.hardware.consumerir.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl
+
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files

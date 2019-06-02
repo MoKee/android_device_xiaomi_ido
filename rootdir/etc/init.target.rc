@@ -26,6 +26,10 @@
 #
 
 on boot
+    # IR Blaster
+    chown system system /sys/class/leds/infrared/transmit
+    chown system system /sys/class/leds/infrared/brightness
+
     #  KeyDisabler
     chown root system /proc/touchpanel/capacitive_keys_enable
     chmod 0664 /proc/touchpanel/capacitive_keys_enable
