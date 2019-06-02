@@ -112,7 +112,8 @@ PRODUCT_PACKAGES += \
     sensors.msm8916
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
+    $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf \
+    $(LOCAL_PATH)/configs/calmodule.cfg:system/vendor/etc/calmodule.cfg
 
 # Thermal
 PRODUCT_COPY_FILES += \
