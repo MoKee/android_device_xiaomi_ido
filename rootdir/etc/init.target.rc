@@ -26,65 +26,7 @@
 #
 
 on boot
-    # Torch
-    chown system camera /sys/class/leds/torch-light/brightness
-    chmod 0660 /sys/class/leds/torch-light/brightness
-
-    write /sys/block/mmcblk0/queue/add_random 0
-    write /sys/block/mmcblk0/bdi/read_ahead_kb 128
-
-# sysFs properties for ST
-    #for caliberation
-    chown system system /sys/bus/i2c/devices/i2c-0/0-006b/accelerometer/cali_update
-    chown system system /sys/bus/i2c/devices/i2c-0/0-006b/gyroscope/cali_update
-    chown system system /sys/bus/i2c/devices/i2c-0/0-000c/reset_calibrate
-    chown system system /sys/class/sensors/proximity/device/cali_update
-    chown system system /sys/class/sensors/accelerometer/device/accelerometer/cali_param_1
-    chown system system /sys/class/sensors/accelerometer/device/accelerometer/cali_param_2
-    chown system system /sys/class/sensors/accelerometer/device/accelerometer/cali_param_3
-    chown system system /sys/class/sensors/gyroscope/device/gyroscope/cali_param_1
-    chown system system /sys/class/sensors/gyroscope/device/gyroscope/cali_param_2
-    chown system system /sys/class/sensors/gyroscope/device/gyroscope/cali_param_3
-    
-    chown system system /sys/bus/i2c/devices/i2c-0/0-006b/accelerometer/enable_device
-    chown system system /sys/bus/i2c/devices/i2c-0/0-006b/accelerometer/pollrate_ms
-    chown system system /sys/bus/i2c/devices/i2c-0/0-006b/accelerometer/range
-    chown system system /sys/bus/i2c/devices/i2c-0/0-006b/gyroscope/enable_device
-    chown system system /sys/bus/i2c/devices/i2c-0/0-006b/gyroscope/pollrate_ms
-    chown system system /sys/bus/i2c/devices/i2c-0/0-006b/gyroscope/range
-    chown system input /sys/bus/i2c/devices/i2c-0/0-0023/enable
-    chown system input /sys/bus/i2c/devices/i2c-0/0-0023/enable_als_sensor
-    chown system input /sys/bus/i2c/devices/i2c-0/0-0023/poll_delay
-    chown system input /sys/bus/i2c/devices/i2c-0/0-000c/enable_mag
-    chown system input /sys/bus/i2c/devices/i2c-0/0-000c/delay_mag
-    
-    #for stk3x1x
-    chown system system /sys/class/input/input2/device/enable
-    chown system system /sys/class/input/input2/device/code
-    chown system system /sys/class/input/input2/device/cali
-    chown system system /sys/class/input/input2/device/cali_param_1
-    chown system system /sys/class/input/input2/device/cali_param_2
-    chown system system /sys/class/input/input2/device/cali_update
-    chown system system /sys/class/input/input1/device/enable_als_sensor
-    chown system system /sys/class/input/input1/device/code
-    chown system system /sys/class/input/input1/device/delay
-
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-006b/accelerometer/enable_device
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-006b/accelerometer/pollrate_ms
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-006b/accelerometer/range
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-006b/gyroscope/enable_device
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-006b/gyroscope/pollrate_ms
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-006b/gyroscope/range
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-0023/enable
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-0023/enable_als_sensor
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-0023/poll_delay
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-000c/enable_mag
-    chmod 0664 /sys/bus/i2c/devices/i2c-0/0-000c/delay_mag
-    
     #  KeyDisabler
-    chown root system /sys/bus/i2c/drivers/atmel_mxt_ts/5-004a/keys_off
-    chmod 0664 /sys/bus/i2c/drivers/atmel_mxt_ts/5-004a/keys_off
-    restorecon /sys/bus/i2c/drivers/atmel_mxt_ts/5-004a/keys_off
-
-on property:init.svc.qcamerasvr=running
-    restart cameraserver
+    chown root system /proc/touchpanel/capacitive_keys_enable
+    chmod 0664 /proc/touchpanel/capacitive_keys_enable
+    restorecon /proc/touchpanel/capacitive_keys_enable
