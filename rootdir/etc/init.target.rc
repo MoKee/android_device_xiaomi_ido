@@ -34,3 +34,15 @@ on boot
     chown root system /proc/touchpanel/capacitive_keys_enable
     chmod 0664 /proc/touchpanel/capacitive_keys_enable
     restorecon /proc/touchpanel/capacitive_keys_enable
+
+    #  Fingerprint
+    chown input system /sys/devices/soc.0/fpc1020.70/enable_wakeup
+    chmod 0666 /sys/devices/soc.0/fpc1020.70/enable_wakeup
+    chown system system /sys/devices/soc.0/fpc1020.70/clk_enable
+    chmod 0660 /sys/devices/soc.0/fpc1020.70/clk_enable
+    chown system system /sys/devices/soc.0/fpc1020.70/hw_reset
+    chmod 0220 /sys/devices/soc.0/fpc1020.70/hw_reset
+    chown system system /sys/devices/soc.0/fpc1020.70/irq
+    chmod 0660 /sys/devices/soc.0/fpc1020.70/irq
+    chown system system /sys/devices/soc.0/fpc1020.70/spi_prepare
+    chmod 0660 /sys/devices/soc.0/fpc1020.70/spi_prepare

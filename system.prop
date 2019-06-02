@@ -14,6 +14,9 @@ ro.sf.lcd_density=320
 # Factory Reset Protection
 ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/config
 
+# Fingerprint
+ro.hardware.fingerprint=msm8916
+
 # Fusion mag field filter
 ro.fusion.magfield.max=250
 
