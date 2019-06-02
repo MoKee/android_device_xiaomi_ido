@@ -83,7 +83,7 @@ BOARD_SEPOLICY_DIRS += \
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib/libmmcamera2_imglib_modules.so|libshim_camera.so
+    /system/vendor/bin/mm-qcamera-daemon|libshim_camera.so:/system/vendor/bin/perfd|libshim_atomic.so
 
 # inherit from the proprietary version
 include vendor/xiaomi/ido/BoardConfigVendor.mk
