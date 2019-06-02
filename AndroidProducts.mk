@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mk_gucci.mk
+    $(LOCAL_DIR)/mk_ido.mk

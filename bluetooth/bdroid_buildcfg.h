@@ -17,6 +17,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "HM NOTE 1S"
+#define BTM_DEF_LOCAL_NAME   "Xiaomi Redmi 3"
 #define BLUETOOTH_QTI_SW TRUE
 #endif

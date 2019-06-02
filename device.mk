@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/xiaomi/gucci/gucci-vendor.mk)
+$(call inherit-product, vendor/xiaomi/ido/ido-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -128,7 +128,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.build.vendor_security_patch=2016-10-01
+    ro.mk.build.vendor_security_patch=2017-01-01
 
 # Wifi
 PRODUCT_COPY_FILES += \

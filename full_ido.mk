@@ -15,14 +15,15 @@
 #
 
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from gucci device
-$(call inherit-product, device/xiaomi/gucci/device.mk)
+# Inherit from ido device
+$(call inherit-product, device/xiaomi/ido/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := gucci
-PRODUCT_NAME := full_gucci
+PRODUCT_DEVICE := ido
+PRODUCT_NAME := full_ido
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := HM NOTE 1S
+PRODUCT_MODEL := Redmi 3
 PRODUCT_MANUFACTURER := Xiaomi

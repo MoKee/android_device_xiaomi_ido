@@ -15,12 +15,10 @@
 # limitations under the License.
 #
 
-FORCE_32_BIT := true
-
 # Inherit from msm8916-common
 include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/gucci
+DEVICE_PATH := device/xiaomi/ido
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -49,18 +47,15 @@ TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # Init
-TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(DEVICE_PATH)/init/init_gucci.cpp
+TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(DEVICE_PATH)/init/init_ido.cpp
 
 # Kernel
-BOARD_DTBTOOL_ARGS := -2
-BOARD_KERNEL_IMAGE_NAME := zImage
-BOARD_KERNEL_SEPARATED_DT := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/gucci
-TARGET_KERNEL_CONFIG := gucci_defconfig
-BOARD_KERNEL_CMDLINE += phy-msm-usb.floated_charger_enable=1
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8916
+TARGET_KERNEL_CONFIG := mokee_ido_defconfig
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-BOARD_RAMDISK_OFFSET     := 0x01000000
+BOARD_RAMDISK_OFFSET     := 0x02000000
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -87,4 +82,4 @@ TARGET_LD_SHIM_LIBS += \
     /system/vendor/lib/libmmcamera2_imglib_modules.so|libshim_camera.so
 
 # inherit from the proprietary version
-include vendor/xiaomi/gucci/BoardConfigVendor.mk
+include vendor/xiaomi/ido/BoardConfigVendor.mk

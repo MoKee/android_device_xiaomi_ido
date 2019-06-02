@@ -4,11 +4,11 @@
     "target_path": "device/cyanogen/msm8916-common"
   },
   {
-    "repository": "android_kernel_xiaomi_gucci",
-    "target_path": "kernel/xiaomi/gucci"
+    "repository": "android_kernel_xiaomi_msm8916",
+    "target_path": "kernel/xiaomi/msm8916"
   },
   {
-    "repository": "android_vendor_xiaomi_gucci",
-    "target_path": "vendor/xiaomi/gucci"
+    "repository": "android_vendor_xiaomi_ido",
+    "target_path": "vendor/xiaomi/ido"
   }
 ]
