@@ -72,6 +72,12 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
     fingerprint.msm8916
 
+# FM
+PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl \
+    libfmjni \
+    FMRadio
+
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
