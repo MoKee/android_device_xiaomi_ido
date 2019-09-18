@@ -36,7 +36,6 @@
 
 #include "vendor_init.h"
 #include "property_service.h"
-#include "log.h"
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
@@ -79,4 +78,11 @@ void init_target_properties()
     property_set("dalvik.vm.heapminfree", heapminfree);
     property_set("dalvik.vm.heapmaxfree", "8m");
 
+}
+
+void vendor_load_properties()
+{
+    // Init a dummy BT MAC address, will be overwritten later
+    property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
+    init_target_properties();
 }
