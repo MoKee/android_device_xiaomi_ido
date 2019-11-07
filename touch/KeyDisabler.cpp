@@ -27,7 +27,7 @@ namespace V1_0 {
 namespace implementation {
 
 constexpr const char kControlPath[] =
-    "/proc/touchpanel/capacitive_keys_enable";
+    "/proc/touchscreen/disable_keys";
 
 KeyDisabler::KeyDisabler() {
     mHasKeyDisabler = !access(kControlPath, F_OK);
@@ -50,7 +50,7 @@ Return<bool> KeyDisabler::isEnabled() {
 Return<bool> KeyDisabler::setEnabled(bool enabled) {
     if (!mHasKeyDisabler) return false;
 
-    if (!android::base::WriteStringToFile((enabled ? "0" : "1"), kControlPath)) {
+    if (!android::base::WriteStringToFile((enabled ? "1" : "0"), kControlPath)) {
         LOG(ERROR) << "Failed to write " << kControlPath;
         return false;
     }
