@@ -70,7 +70,7 @@ vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_wavelet_lib.so|76091fd9dfbefd06e108e0d129976d8dffd27fb1
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmmipl.so|8ba0f6611f8b7b1bdc05f47e7f708d2da826b32b
-vendor/lib/libmmjpeg.so|159dac7e57174dfd6fd2820499d5cef4b3f05112
+vendor/lib/libmmjpeg.so|cb21a0ef6751578c52e450dc612a7a894a5c4746
 vendor/lib/libmmqjpeg_codec.so|716d4df63afba2a3c791e5f84ffe5da1fb96267e
 vendor/lib/libmorpho_panorama_gp.so
 vendor/lib/liboemcamera.so
